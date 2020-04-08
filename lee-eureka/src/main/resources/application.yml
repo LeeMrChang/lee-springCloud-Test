@@ -1,0 +1,12 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: lee-eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka
+  server:
+    eviction-interval-timer-in-ms: 5000  #剔除无效链接的间隔时间
+    enable-self-preservation: false      # 关闭自我保护
